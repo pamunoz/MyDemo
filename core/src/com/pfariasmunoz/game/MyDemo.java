@@ -14,7 +14,7 @@ public class MyDemo implements ApplicationListener {
 	private SpriteBatch batch;
 	private Texture texture;
 	private Sprite sprite;
-    private float rot;
+    private float rotation;
 	
 	@Override
 	public void create () {
@@ -49,8 +49,8 @@ public class MyDemo implements ApplicationListener {
 		batch.begin();
 
         final float degreesPerSecond = 10.0f;
-        rot = (rot + Gdx.graphics.getDeltaTime() * degreesPerSecond) % 360;
-        sprite.setRotation(rot);
+        rotation = (rotation + Gdx.graphics.getDeltaTime() * degreesPerSecond) % 360;
+        sprite.setRotation(rotation);
 		sprite.draw(batch);
 		batch.end();
 	}
